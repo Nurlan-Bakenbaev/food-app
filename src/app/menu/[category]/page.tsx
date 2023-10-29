@@ -4,13 +4,13 @@ import Image from "next/image";
 const CategoryPage = () => {
   console.log(FeaturedProducts);
   return (
-    <div className="flex flex-row flex-wrap gap-1 ">
+    <div className="flex flex-row flex-wrap gap-2 justify-center mt-5 px-3 text-red-500 font-semibold  uppercase">
       {FeaturedProducts.map((item, id) => (
         <div
-          className=" cursorr bg-white even:bg-blue border-1 border-pink-100"
+          className=" bg-white even:bg-blue py-6 group  even:bg-fuchsia-200"
           key={id}
         >
-          <div className="relative w-[300px] h-[200px]">
+          <div className=" relative cursor-pointer w-[350px] h-[250px] transition-transform transform hover:scale-110">
             <Image
               layout="fill"
               objectFit="contain"
@@ -18,8 +18,8 @@ const CategoryPage = () => {
               src={item.photo}
             />
           </div>
-          <div className="text-center">
-            <h2>{item.name}</h2>
+          <div className=" mt-4 flex justify-between px-7">
+            <h2 className="text-xl">{item.name}</h2>
             <span>${item.price}</span>
           </div>
         </div>
