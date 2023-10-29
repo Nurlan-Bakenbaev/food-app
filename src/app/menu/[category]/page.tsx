@@ -1,12 +1,13 @@
 import React from "react";
 import { FeaturedProducts } from "@/components/data";
 import Image from "next/image";
+import Link from "next/link";
 const CategoryPage = () => {
   console.log(FeaturedProducts);
   return (
     <div className="flex flex-row flex-wrap gap-2 justify-center mt-5 px-3 text-red-500 font-semibold  uppercase">
       {FeaturedProducts.map((item, id) => (
-        <div
+        <Link href={`/product/${item.name}`}
           className=" bg-white even:bg-blue py-6 group  even:bg-fuchsia-200"
           key={id}
         >
@@ -22,7 +23,7 @@ const CategoryPage = () => {
             <h2 className="text-xl">{item.name}</h2>
             <span>${item.price}</span>
           </div>
-        </div>
+        </Link>
       ))}
     </div>
   );
