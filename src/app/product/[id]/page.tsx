@@ -3,7 +3,7 @@ import React from "react";
 
 const SingleProductPage = () => {
   return (
-    <div>
+    <div className=" h-screen">
       <div className="relative">
         <Image
           objectFit="contain"
