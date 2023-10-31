@@ -2,3 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.spin {
+  animation: spin 35s linear infinite; 
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(300deg);
+  }
+  100% {
+    transform: rotate(360deg); 
+  }
+}

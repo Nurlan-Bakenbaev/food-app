@@ -18,6 +18,7 @@ export interface Pizza {
   id: number;
   name: string;
   description: string;
+  fulldesc?: string;
   photo: any;
   price: Number;
   options: PizzaOption[];
@@ -52,6 +53,8 @@ export const FeaturedProducts: Pizza[] = [
     description:
       "A delicious pizza topped with pepperoni slices and melted cheese.",
     photo: photo2,
+    fulldesc:
+      "Vegetarian pizza is a popular and versatile pizza variation that caters to individuals who prefer a meatless diet or simply enjoy the delicious combination of plant-based ingredients. Instead of traditional meat toppings, it features an array of colorful and flavorful vegetables. Common toppings include tomato sauce, mozzarella cheese, bell peppers, onions, mushrooms, olives, spinach, artichoke hearts, and fresh basil leaves. Vegetarian pizza is celebrated for its vibrant and wholesome flavors, offering a healthier alternative without sacrificing taste. It accommodates a wide range of dietary preferences, including those who follow vegetarian and vegan lifestyles, making it a delightful and inclusive choice for pizza lovers of all backgrounds.",
     price: 12,
     options: [
       {

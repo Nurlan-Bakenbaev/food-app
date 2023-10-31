@@ -3,7 +3,6 @@ import { FeaturedProducts } from "@/components/data";
 import Image from "next/image";
 import Link from "next/link";
 const CategoryPage = () => {
-  console.log(FeaturedProducts);
   return (
     <div className="flex flex-row flex-wrap gap-2 justify-center mt-5 px-3 text-red-500 font-semibold  uppercase">
       {FeaturedProducts.map((item, id) => (
