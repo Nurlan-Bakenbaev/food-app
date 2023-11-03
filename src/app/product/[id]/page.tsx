@@ -1,6 +1,8 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import { FeaturedProducts } from "@/components/data";
+import Price from "@/components/Price";
 
 const SingleProductPage = () => {
   return (
@@ -19,9 +21,9 @@ const SingleProductPage = () => {
           {FeaturedProducts[2].name}
         </h1>
         <p>{FeaturedProducts[1].fulldesc}</p>
-        <h3 className="text-3xl mt-3 font-semibold">
-          ${FeaturedProducts[1].price}
-        </h3>
+        <div>
+          <Price data={FeaturedProducts[1]} />
+        </div>
       </div>
     </div>
   );
